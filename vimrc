@@ -4,10 +4,10 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 "set rtp+=~/.vim/bundle/Vundle.vim
 " TODO maybe change this Path
-set rtp+=~/git/configVim/bundle/Vundle.vim
+set rtp+=~/git/vimconfig/bundle/Vundle.vim
 "call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-call vundle#begin('~/git/configVim/bundle/')
+call vundle#begin('~/git/vimconfig/bundle/')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -44,11 +44,15 @@ filetype plugin indent on    " required
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
-" colors ron
-"colors evolution
-"colors molokai_dark
+"colors claritybeauty
+"colors evolution 
+colors molokai_dark 
+"colors wombat256dave
 
 " Clipboard
 set clipboard=unnamedplus
 "vmap <C-c> "+y
 "nmap <C-v> "+p
+set shortmess=a
+set cmdheight=2
+map <f2> :w<return> :!make<return>
