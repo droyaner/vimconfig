@@ -26,10 +26,12 @@ endif
 "<SET COLORS>
 "colors claritybeauty
 "colors evolution 
-colors CandyPaper
+"colors CandyPaper
+colors badwolf
 "</SET COLORS>
 
 
+set number
 "<CLIPBOARD>
 set clipboard=unnamedplus
 vmap <C-c> "+y

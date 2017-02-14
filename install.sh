@@ -1,7 +1,8 @@
 #!/bin/bash
+PWD=$(pwd)
 
 sudo apt-get update
-sudo apt-get install -y vim hunspell-de-de vim-gnome build-essential cmake python-dev python3-dev
+sudo apt-get install -y vim hunspell-de-de vim-gnome build-essential cmake python-dev python3-dev ruby-dev
 
 set -x
 rm ~/.vimrc
@@ -18,6 +19,11 @@ $(pwd)/bundle/YouCompleteMe/install.py --clang-completer
 
 # Install Vim-colorschemes'
 cp $(pwd)/bundle/vim-colorschemes/colors/* ~/.vim/colors
+
+# Install Command T
+cd $(pwd)./bundle/command-t/
+rake make
+cd $PWD
 
 # Install Spell Checking
 mkdir -p ~/.vim/spell
